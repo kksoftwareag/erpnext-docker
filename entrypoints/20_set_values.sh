@@ -25,17 +25,20 @@ DEVELOPER_MODE=${DEVELOPER_MODE:-"0"}
 echo "set DEVELOPER_MODE to ${DEVELOPER_MODE}"
 sed -i "s/{{DEVELOPER_MODE}}/${DEVELOPER_MODE}/" sites/site1.local/site_config.json
 
+echo "set HOST_NAME to ${HOST_NAME}"
+sed -i "s~{{HOST_NAME}}~${HOST_NAME}~" sites/site1.local/site_config.json
+
 WORKER=${WORKER:-"4"}
 echo "set WORKER to ${WORKER}"
 sed -i "s/{{WORKER}}/${WORKER}/" /etc/supervisor/conf.d/supervisord.conf
 
 MAX_FILE_SIZE=${MAX_FILE_SIZE:-"10485760"}
 echo "set MAX_FILE_SIZE to ${MAX_FILE_SIZE}"
-sed -i "s/{{MAX_FILE_SIZE}}/${MAX_FILE_SIZE}/" sites/common_site_config.json
+sed -i "s/\"{{MAX_FILE_SIZE}}\"/${MAX_FILE_SIZE}/" sites/common_site_config.json
 
 IGNORE_CSRF=${IGNORE_CSRF:-"false"}
 echo "set IGNORE_CSRF to ${IGNORE_CSRF}"
-sed -i "s/{{IGNORE_CSRF}}/${IGNORE_CSRF}/" sites/common_site_config.json
+sed -i "s/\"{{IGNORE_CSRF}}\"/${IGNORE_CSRF}/" sites/common_site_config.json
 
 SCHEDULER_INTERVAL=${SCHEDULER_INTERVAL:-"360"}
 echo "set SCHEDULER_INTERVAL to ${SCHEDULER_INTERVAL}"
