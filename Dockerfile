@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 LABEL maintainer="//SEIBERT/MEDIA GmbH  <docker@seibert-media.net>"
 
 ARG HOST_NAME=site1.local
-ARG BENCH_VERSION=v5.0
+ARG BENCH_VERSION=master
 ARG BENCH_PATH=https://github.com/seibert-media/bench.git
 
 ARG FRAPPE_VERSION=v12.4.1
