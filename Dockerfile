@@ -6,10 +6,10 @@ ARG HOST_NAME=site1.local
 ARG BENCH_VERSION=v5.0
 ARG BENCH_PATH=https://github.com/frappe/bench.git
 
-ARG FRAPPE_VERSION=v12.3.0
+ARG FRAPPE_VERSION=v12.4.1
 ARG FRAPPE_PATH=https://github.com/frappe/frappe.git
 
-ARG ERPNEXT_VERSION=v12.5.1
+ARG ERPNEXT_VERSION=v12.6.0
 ARG ERPNEXT_PATH=https://github.com/frappe/erpnext.git
 
 ARG WKHTMLTOX_URL=https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb
@@ -90,8 +90,6 @@ RUN bench init /home/frappe/bench-repo \
 	--frappe-branch ${FRAPPE_VERSION} \
 	--frappe-path ${FRAPPE_PATH} \
 	--python python3
-COPY froozenRequirements.txt /home/frappe/bench-repo/froozenRequirements.txt
-RUN /home/frappe/bench-repo/env/bin/pip install --force-reinstall -r /home/frappe/bench-repo/froozenRequirements.txt
 
 WORKDIR /home/frappe/bench-repo
 RUN bench get-app erpnext ${ERPNEXT_PATH} \
