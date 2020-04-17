@@ -6,10 +6,10 @@ ARG HOST_NAME=site1.local
 ARG BENCH_VERSION=v5.0
 ARG BENCH_PATH=https://github.com/frappe/bench.git
 
-ARG FRAPPE_VERSION=v12.4.1
+ARG FRAPPE_VERSION=v12.5.0
 ARG FRAPPE_PATH=https://github.com/frappe/frappe.git
 
-ARG ERPNEXT_VERSION=v12.6.0
+ARG ERPNEXT_VERSION=v12.7.0
 ARG ERPNEXT_PATH=https://github.com/frappe/erpnext.git
 
 ARG WKHTMLTOX_URL=https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb
