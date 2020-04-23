@@ -5,7 +5,7 @@
 	"dns_multitenant": false,
 	"file_watcher_port": 6787,
 	"frappe_user": "frappe",
-	"scheduler_interval": "{{SCHEDULER_INTERVAL}}",
+	"scheduler_interval": {{SCHEDULER_INTERVAL}},
 	"gunicorn_workers": 4,
 	"rebase_on_pull": false,
 	"redis_cache": "redis://{{REDIS_CACHE}}",
